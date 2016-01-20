@@ -3,21 +3,25 @@
     <head>
         <title></title>
             <meta charset="utf-8"/>
+            <script src="jquery-2.20.min.js"></script>
             <script type="text/javascript">
-                var Gato =new gato("Mayu");//crear clase
+                /* Cuando este listo para usarse  */ 
+                /*Version vieja
+                $(document).ready(function (){
+                    
+                });
                 
-                function gato(nombre)
-                {
-                    //atributos y metodos  para el objeto que creamos
-                    this.nombre=nombre;
-                    this.maulla=function()
-                    {
-                        alert("miau");//esto es el metodo
-                    }
-                }
-                
-                Gato.maulla();
+                */
+                $(document).on('ready',function(){
+                    $('#prueba').text('<h>hola mundo<h>'); //Selector en ID
+                    
+                    $('.prueba').html('<strong> Uso Jquery </strong>'); //  Selector en Class
+                    
+                });
                 
             </script>
+            
+            <div id="prueba"></div>
+            <div class="prueba"></div>
     </head>
 </html>

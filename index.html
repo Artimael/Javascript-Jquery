@@ -5,23 +5,30 @@
             <meta charset="utf-8"/>
             <script src="jquery-2.20.min.js"></script>
             <script type="text/javascript">
-                /* Cuando este listo para usarse  */ 
-                /*Version vieja
-                $(document).ready(function (){
-                    
-                });
-                
-                */
                 $(document).on('ready',function(){
-                    $('#prueba').text('<h>hola mundo<h>'); //Selector en ID
+                    var seleccion =$('.ejem1'); //guardo seleccion de ejem clase
+                    if(seleccion.length)
+                        console.log('Existen:'+seleccion.length);
+                    else    
+                        console.log('No exisen');
                     
-                    $('.prueba').html('<strong> Uso Jquery </strong>'); //  Selector en Class
+                   // seleccion.not('.cl1').text('No tiene cl1'); //seleccion todo menos cl1
+                        
+                   // seleccion.has('p').text('Este elemento tiene P');
                     
+                    $('li').first().html('<strong>Soy un strong</strong>');
+                    $('li').eq(2).text('Soy el numero 3')
                 });
                 
             </script>
-            
-            <div id="prueba"></div>
-            <div class="prueba"></div>
+            <div class="ejem1 cl1"><p></p></div>
+            <div class="ejem1"></div>
+            <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            </ul>
+            <div class="ejem1"></div>
     </head>
 </html>

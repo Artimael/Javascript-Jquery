@@ -3,25 +3,40 @@
     <head>
         <title></title>
             <meta charset="utf-8"/>
-            <script src="jquery-2.20.min.js"></script>
-            <script type="text/javascript">
-                /* Cuando este listo para usarse  */ 
-                /*Version vieja
-                $(document).ready(function (){
+            <script src="jquery-2.20.min.js"> </script>
+        
+            <script >
+                $(document).on ("ready",function(){
+                    //Ingresar aunque tengan la misma etiqueta
+                    /*
+                    $('div').css({
+                        'background-color':'#000',
+                    });//ingresar a todos los div y todos negro     
+                    */
+                    
+                    /*
+                     $('div.miDiv').css({
+                        'background-color':'#000',
+                    });//ingresar a todos los div y todos negro     
+                    */
+                    $('#parrafoUno,#parrafoDos,span').text("hola selectores");
+                    //todos los p dentro de los article que esten dentro de un div de class miDiv
                     
                 });
-                
-                */
-                $(document).on('ready',function(){
-                    $('#prueba').text('<h>hola mundo<h>'); //Selector en ID
-                    
-                    $('.prueba').html('<strong> Uso Jquery </strong>'); //  Selector en Class
-                    
-                });
-                
             </script>
             
-            <div id="prueba"></div>
-            <div class="prueba"></div>
+            <div class="miDiv">
+                <article>
+                    <p id='parrafoUno'>Hola Jquery</p>
+                </article>
+            </div>
+        
+            <div  >
+                <article class="miDiv">
+                    <p id='parrafoDos'>Curso de CodigoFacilito</p>
+                </article>
+            </div>
+            <span></span>
+        
     </head>
 </html>

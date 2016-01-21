@@ -7,36 +7,16 @@
         
             <script >
                 $(document).on ("ready",function(){
-                    //Ingresar aunque tengan la misma etiqueta
-                    /*
-                    $('div').css({
-                        'background-color':'#000',
-                    });//ingresar a todos los div y todos negro     
-                    */
-                    
-                    /*
-                     $('div.miDiv').css({
-                        'background-color':'#000',
-                    });//ingresar a todos los div y todos negro     
-                    */
-                    $('#parrafoUno,#parrafoDos,span').text("hola selectores");
-                    //todos los p dentro de los article que esten dentro de un div de class miDiv
-                    
+                        //get para tomar set para colocar 
+                       // $('#parrafo').html("<strong>Hola jQuery</strong>");
+                        //var almacen=$("#parrafo").html();
+                    var almacen=$("#prueba").attr("class","ejemplo");    
+                    //alert(almacen);
                 });
             </script>
             
-            <div class="miDiv">
-                <article>
-                    <p id='parrafoUno'>Hola Jquery</p>
-                </article>
-            </div>
-        
-            <div  >
-                <article class="miDiv">
-                    <p id='parrafoDos'>Curso de CodigoFacilito</p>
-                </article>
-            </div>
-            <span></span>
+    <p id='parrafo'><strong>Hola Jquery</strong></p>
+        <div id="prueba"></div>
         
     </head>
 </html>

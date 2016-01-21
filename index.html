@@ -4,63 +4,34 @@
         <title></title>
             <meta charset="utf-8"/>
 
-            <script src="jquery-2.20.min.js"> </script>
-           
-        <script >
-                $(document).on ("ready",function(){
-                    $('body,html').css('background','#FFF');
-                });
-            
-                var cssH1={
-                    'text-align':'center',
-                    'color':'red'
-                }
-                $('h1').css(cssH1);
-                
-                var bgItem2=$('#item2').css('background-color');
-                var cItem2=$('#item2').css('color');
-                if(bgItem2===cItem2)
-                    {
-                        $('#item2').css('color','#FFF');
-                    }
-                
-            </script>     
+            <script src="jquery-2.20.min.js"> </script> 
         
             <style>
                 
-                body,html
+                .test
                 {
-                    background: : #CCC;
-                    color: #000;
-                    font-family: Arial;
-                    margin:0;
-                    padding: 0;
+                    background-color: red;
                 }
-                
-                #item1
-                {
-                    background: :#F6F6F6;
-                    height: : 50px;
-                    margin: :5% auto;
-                    width: 300px;
-                }
-                
-                #item2
-                {
-                    display:block;
-                    background: : #000;
-                    height:50px;
-                    margin:5%auto;
-                    width: 300px;
-                }
-                
                 
             </style>
         
+            <script >
+                $(document).on ("ready",function(){
+                    $(document).on("click",function(){
+                      // $("#test").addClass("test"); 
+                      // $("#test").removeClass("test"); 
+                       $("#test").toggleClass("test"); //añade y remueve :O
+                        
+                        if($("#test").hasClass("test"))
+                            $("#test").text("Hey! Soy rojo");
+                        else
+                            $("#test").text("No soy rojo :(");
+                    });
+                });
+            </script>            
+        
     </head>
             <body>
-                <h1> Metodo CSS de Jquery</h1>
-                <div id="item1">Item1</div>
-                <div id="item2">Item2</div>
+                <div id="test"  >Click On me</div>
             </body>
 </html>

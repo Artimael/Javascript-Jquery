@@ -3,6 +3,7 @@
     <head>
         <title></title>
             <meta charset="utf-8"/>
+<<<<<<< HEAD
             <script src="jquery-2.20.min.js"></script>
             
             <script type="text/javascript">
@@ -63,4 +64,37 @@
             <p>Hola amigos</p>
         </div>
     </body>
+=======
+
+            <script src="jquery-2.20.min.js"> </script> 
+        
+            <style>
+                
+                .test
+                {
+                    background-color: red;
+                }
+                
+            </style>
+        
+            <script >
+                $(document).on ("ready",function(){
+                    $(document).on("click",function(){
+                      // $("#test").addClass("test"); 
+                      // $("#test").removeClass("test"); 
+                       $("#test").toggleClass("test"); //añade y remueve :O
+                        
+                        if($("#test").hasClass("test"))
+                            $("#test").text("Hey! Soy rojo");
+                        else
+                            $("#test").text("No soy rojo :(");
+                    });
+                });
+            </script>            
+        
+    </head>
+            <body>
+                <div id="test"  >Click On me</div>
+            </body>
+>>>>>>> origin/master
 </html>

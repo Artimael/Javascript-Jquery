@@ -3,98 +3,44 @@
     <head>
         <title></title>
             <meta charset="utf-8"/>
-<<<<<<< HEAD
+    
             <script src="jquery-2.20.min.js"></script>
             
             <script type="text/javascript">
                 $(document).on('ready',function()
                 {
-                    //console.log($('header img').css('width'));
-                    //console.log($('#e1').height(50));
+                   // $("#prueba").attr('class','cambielaClase');//nombre,cambioclase yo crear
+                    //$('#pueba').removeAttr('class');
+                    /*
+                    $("#prueba").attr('class',function(){
+                        var cadena = "Hola_Mundo"
+                        return cadena;
+                    });
+                    */
+                    //var clase =$('#prueba').attr('class'); // obtiene la clase
+                   // alert(clase);
                     
-                    var pos=$('#e2 p').position();
+                    $('a').on("click",function(e){
+                        e.preventDefault();
+                        var link =$(this).attr('href');
+                        alert("Usted esta saliendo de nuestro sitio");
+                        location.href=link;
+                    });
                     
-                    console.log('Posicion Left :' + pos.left + 'Posicion Top' + pos.top);
                 });
                 
             </script>
-        
-            <style>
-            
-            body,html
-                {
-                    background: #000;
-                    margin: 0;
-                    padding: 0;
-                }
-            
-            header
-                {
-                    display: block;
-                    margin: 0 auto;
-                    width: 365px;
-                }
-            
-            #e1,#e2
-                {
-                    background: #0080FF;
-                    display:block;
-                    height: 100px;
-                    margin: 20px auto;
-                    width:400px;
-                    
-                }
-                
-                #e1
-                {
-                    background: #FF0040;
-                    height: 150px;
-                }
-                
-            </style>
     </head>
     
     <body>
-        <header>
-            <img src="img/codigofacilito.png" alt="CF" />
-        </header>
-        
-        <div id="e1"></div>
-        <div id="e2">
-            <p>Hola amigos</p>
-        </div>
+        <div id="prueba" class="pruebaClass"></div>
+        <a href="http://www.codigofacilito.com">Codigo Facilito</a>
+        <form>
+            <input type=''>
+            <input type='submit'>
+        </form>
     </body>
-=======
+       
+        
 
-            <script src="jquery-2.20.min.js"> </script> 
-        
-            <style>
-                
-                .test
-                {
-                    background-color: red;
-                }
-                
-            </style>
-        
-            <script >
-                $(document).on ("ready",function(){
-                    $(document).on("click",function(){
-                      // $("#test").addClass("test"); 
-                      // $("#test").removeClass("test"); 
-                       $("#test").toggleClass("test"); //añade y remueve :O
-                        
-                        if($("#test").hasClass("test"))
-                            $("#test").text("Hey! Soy rojo");
-                        else
-                            $("#test").text("No soy rojo :(");
-                    });
-                });
-            </script>            
-        
-    </head>
-            <body>
-                <div id="test"  >Click On me</div>
-            </body>
->>>>>>> origin/master
 </html>

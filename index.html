@@ -1,46 +1,95 @@
-<!DOCTYPE html>
-<html lang="es">
-    <head>
         <title></title>
             <meta charset="utf-8"/>
-    
             <script src="jquery-2.20.min.js"></script>
             
             <script type="text/javascript">
-                $(document).on('ready',function()
-                {
-                   // $("#prueba").attr('class','cambielaClase');//nombre,cambioclase yo crear
-                    //$('#pueba').removeAttr('class');
-                    /*
-                    $("#prueba").attr('class',function(){
-                        var cadena = "Hola_Mundo"
-                        return cadena;
+                $(document).on('ready',function(){
+
+                    $('button').on('click',function(){
+                       
+                        //$('ol li:first').appendTo('ol:first');
+                        $('ol li:last').prependTo('ol:first');
+                        
+                        $('ol:first').append('ol li:first');
                     });
-                    */
-                    //var clase =$('#prueba').attr('class'); // obtiene la clase
-                   // alert(clase);
-                    
-                    $('a').on("click",function(e){
-                        e.preventDefault();
-                        var link =$(this).attr('href');
-                        alert("Usted esta saliendo de nuestro sitio");
-                        location.href=link;
-                    });
-                    
                 });
                 
             </script>
+        
+            <style>
+            
+            body,html
+                {
+                    background: #000;
+                    margin: 0;
+                    padding: 0;
+                }
+            
+            header
+                {
+                    display: block;
+                    margin: 0 auto 50px auto;
+                    width: 365px;
+                }
+                
+                ol
+                {
+                    display: block;
+                    margin: 0 auto;
+                    width: 500px;                   
+                }
+                
+                ol li 
+                {
+                    background: #088A29;
+                    margin: 5px auto;
+                    height: :30 px;
+                    width:100 %;
+                }
+                
+                button
+                {
+                    display: block;
+                    margin: 0 auto;
+                    width:80 px;
+                }
+                
+                div
+                {
+                    background: #fe2e64;
+                    height: :50px;
+                    display: block;
+                    width:400px;
+                    margin: 2px auto;
+                }
+            
+
+                
+            </style>
     </head>
     
     <body>
-        <div id="prueba" class="pruebaClass"></div>
-        <a href="http://www.codigofacilito.com">Codigo Facilito</a>
-        <form>
-            <input type=''>
-            <input type='submit'>
-        </form>
-    </body>
-       
+        <header>
+            <img src="img/codigofacilito.png" alt="CF" />
+        </header>
         
-
+        <ol>
+            <li>Ele 1</li>
+            <li>Ele 2</li>
+            <li>Ele 3</li>
+            <li>Ele 4</li>
+            <li>Ele 5</li>
+        </ol>
+        
+        <button id="test">Ejecutar</button>
+        
+        <div id="e1">
+            <p>Div 1</p>
+        </div>        
+        
+        <div id="e2">
+            <p>Div 2</p>
+        </div>
+        
+    </body>
 </html>

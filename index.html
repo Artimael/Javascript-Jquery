@@ -3,39 +3,84 @@
             <script src="jquery-2.20.min.js"></script>
             
             <script type="text/javascript">
-                $(document).on('ready',function(){
-                
-                   // $('#primero').next().text();//selecciona el siguiente elemento
-                    //console.log($('#primero').next().text());
-                   // $('#test').parent().text
-                  //  console.log( $('#test').parent().text());
-                   // $('#padre').children().attr('id')
-                     //console.log( $('#padre').children().attr('id'));
-                  //  $('#primero').siblings()//aquellos que comparten el mismo padre
-                   $("ul li").each(function(index,elemento)
-                    {    // recorre hermanos
-                        console.log("Este elemento contiente este texto" + $(elemento).text()) ;
+                $(document).on('ready',function()
+                {
+                    $('button').on('click',function(){
+                      
+                        var arreglo=['Dxvuts','codigofacilito','Roof'];
+                        
+                        $.each(arreglo,function(index,val){
+                            
+                            //if(arreglo[index]=='Roof')
+                                //return true;// Salta el Roof
+                            
+                            //console.log('Elemento'+ index + 'valor' + val);
+                            
+                            //if($.inArray('Dxvuts',arreglo)!=-1)//busca la palabra y retorna //indice si no pilla devuelve -1
+                            //console.log(arreglo[$.inArray('Dxvuts',arreglo)]);
+                            
+                            var s='          hola    mun   do              ';
+                            
+                            console.log(s);
+                            console.log($.trim(s));// elimina espacios en blanco
+                            
+                            
+                        });
+                        
                     });
-                    console.log($('#primero').siblings());
+                    
+                        
                 });
                 
             </script>
         
 
     </head>
+
+    <style>
+        
+    body,html
+    {
+        background: #000;
+        color: #000;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+    }
+    header
+    {
+       display: block;
+        margin: 0 auto 50px auto;
+        width:365px;
+    }
+
+    button
+    {
+        display: block;
+        margin: 0  auto;
+        width: 80px;
+    }
+        
+    div
+    {
+        background: #fff;
+        height: :50px;
+        display:block;
+        width:400px;
+        margin:2px auto;
+    }
+    
+    </style>
+
     
     <body>
-        <div>
-             <article id="padre">
-                Hey
-                <div id="test">soy el hijo</div>
-            </article>       
-        </div>
+        <header>
+            <img src="img/codigofacilito.png" alt="CF">
+        </header>
         
-        <ul>
-            <li id="primero">soy el primero</li>
-            <li>Soy el que sigue</li>
-            <li>Soy el hermano</li>
-        </ul>
+        <button id="test">Ejecutar</button>
+        
+        <div id="e1">Metodos Utilitarios</div>
+        
     </body>
 </html>

@@ -5,9 +5,12 @@
             <script type="text/javascript">
                 $(document).on('ready',function()
                 {
-                    //Browser la quitaran recomiendan usar modernizer
+                     $('a').on("click",function(e){
+                       e.preventDefault();//previene que el evento se ejecute
+                       console.log($(this).attr('id'));//quien es this? es el disparador del evento  
+                     }); 
                     
-                    console.log($.isBrowser);
+                    
                 });
                 
             </script>
@@ -18,10 +21,7 @@
 
     
     <body>
-        <ul>
-            <li>Uno</li>
-            <li>Dos</li>
-            <li>Tres</li>
-        </ul>
+        <a href="http://wwww.codigofacilito.com" id="evento">Hola</a>
+        <a id="evento2"> Hola 2</a>
     </body>
 </html>

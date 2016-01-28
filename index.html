@@ -4,92 +4,38 @@
             
             <script type="text/javascript">
                 $(document).on('ready',function(){
-
-                    $('button').on('click',function(){
-                       
-                        //$('ol li:first').appendTo('ol:first');
-                        $('ol li:last').prependTo('ol:first');
-                        
-                        $('ol:first').append('ol li:first');
+                
+                   // $('#primero').next().text();//selecciona el siguiente elemento
+                    //console.log($('#primero').next().text());
+                   // $('#test').parent().text
+                  //  console.log( $('#test').parent().text());
+                   // $('#padre').children().attr('id')
+                     //console.log( $('#padre').children().attr('id'));
+                  //  $('#primero').siblings()//aquellos que comparten el mismo padre
+                   $("ul li").each(function(index,elemento)
+                    {    // recorre hermanos
+                        console.log("Este elemento contiente este texto" + $(elemento).text()) ;
                     });
+                    console.log($('#primero').siblings());
                 });
                 
             </script>
         
-            <style>
-            
-            body,html
-                {
-                    background: #000;
-                    margin: 0;
-                    padding: 0;
-                }
-            
-            header
-                {
-                    display: block;
-                    margin: 0 auto 50px auto;
-                    width: 365px;
-                }
-                
-                ol
-                {
-                    display: block;
-                    margin: 0 auto;
-                    width: 500px;                   
-                }
-                
-                ol li 
-                {
-                    background: #088A29;
-                    margin: 5px auto;
-                    height: :30 px;
-                    width:100 %;
-                }
-                
-                button
-                {
-                    display: block;
-                    margin: 0 auto;
-                    width:80 px;
-                }
-                
-                div
-                {
-                    background: #fe2e64;
-                    height: :50px;
-                    display: block;
-                    width:400px;
-                    margin: 2px auto;
-                }
-            
 
-                
-            </style>
     </head>
     
     <body>
-        <header>
-            <img src="img/codigofacilito.png" alt="CF" />
-        </header>
-        
-        <ol>
-            <li>Ele 1</li>
-            <li>Ele 2</li>
-            <li>Ele 3</li>
-            <li>Ele 4</li>
-            <li>Ele 5</li>
-        </ol>
-        
-        <button id="test">Ejecutar</button>
-        
-        <div id="e1">
-            <p>Div 1</p>
-        </div>        
-        
-        <div id="e2">
-            <p>Div 2</p>
+        <div>
+             <article id="padre">
+                Hey
+                <div id="test">soy el hijo</div>
+            </article>       
         </div>
         
+        <ul>
+            <li id="primero">soy el primero</li>
+            <li>Soy el que sigue</li>
+            <li>Soy el hermano</li>
+        </ul>
     </body>
 </html>

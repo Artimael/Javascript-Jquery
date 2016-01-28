@@ -5,31 +5,18 @@
             <script type="text/javascript">
                 $(document).on('ready',function()
                 {
-                    $('button').on('click',function(){
-                      
-                        var arreglo=['Dxvuts','codigofacilito','Roof'];
-                        
-                        $.each(arreglo,function(index,val){
-                            
-                            //if(arreglo[index]=='Roof')
-                                //return true;// Salta el Roof
-                            
-                            //console.log('Elemento'+ index + 'valor' + val);
-                            
-                            //if($.inArray('Dxvuts',arreglo)!=-1)//busca la palabra y retorna //indice si no pilla devuelve -1
-                            //console.log(arreglo[$.inArray('Dxvuts',arreglo)]);
-                            
-                            var s='          hola    mun   do              ';
-                            
-                            console.log(s);
-                            console.log($.trim(s));// elimina espacios en blanco
-                            
-                            
-                        });
-                        
-                    });
-                    
-                        
+                   $('ul li').each(function(index,elemento){
+                   //$.data(elemento,'NombreAtributo',valor);//agregar datos de otro lenguaje 
+                     $.data(elemento,'posicion',index); 
+                       //enviamos 3 escribe
+                   });
+  
+                    $('ul li').each(function(index,elemento){
+                   //$.data(elemento,'NombreAtributo',valor);//agregar datos de otro lenguaje 
+                     console.log($.data(elemento,'posicion')); 
+                        //enviamos 2 obtiene
+                       
+                   });                  
                 });
                 
             </script>
@@ -37,50 +24,13 @@
 
     </head>
 
-    <style>
-        
-    body,html
-    {
-        background: #000;
-        color: #000;
-        font-weight: bold;
-        margin: 0;
-        padding: 0;
-    }
-    header
-    {
-       display: block;
-        margin: 0 auto 50px auto;
-        width:365px;
-    }
-
-    button
-    {
-        display: block;
-        margin: 0  auto;
-        width: 80px;
-    }
-        
-    div
-    {
-        background: #fff;
-        height: :50px;
-        display:block;
-        width:400px;
-        margin:2px auto;
-    }
-    
-    </style>
 
     
     <body>
-        <header>
-            <img src="img/codigofacilito.png" alt="CF">
-        </header>
-        
-        <button id="test">Ejecutar</button>
-        
-        <div id="e1">Metodos Utilitarios</div>
-        
+        <ul>
+            <li>Uno</li>
+            <li>Dos</li>
+            <li>Tres</li>
+        </ul>
     </body>
 </html>

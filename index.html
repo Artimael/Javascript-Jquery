@@ -5,18 +5,9 @@
             <script type="text/javascript">
                 $(document).on('ready',function()
                 {
-                   $('ul li').each(function(index,elemento){
-                   //$.data(elemento,'NombreAtributo',valor);//agregar datos de otro lenguaje 
-                     $.data(elemento,'posicion',index); 
-                       //enviamos 3 escribe
-                   });
-  
-                    $('ul li').each(function(index,elemento){
-                   //$.data(elemento,'NombreAtributo',valor);//agregar datos de otro lenguaje 
-                     console.log($.data(elemento,'posicion')); 
-                        //enviamos 2 obtiene
-                       
-                   });                  
+                    //Browser la quitaran recomiendan usar modernizer
+                    
+                    console.log($.isBrowser);
                 });
                 
             </script>

@@ -3,61 +3,25 @@
             <script src="jquery-2.20.min.js"></script>
             
             <script type="text/javascript">
+                
                 $(document).on('ready',function()
                 {
-                    var caja1bg;
-                    var v=0;
-                    /*
-                    var caja1bg;
- 
-                  $('#caja1').mouseover(function(){
-                      caja1bg=$(this).css('background')
-                      $(this).css('background','red');
-                  });
-                    
-                $('#caja1').mouseout(function(){
-                   
-                    caja1bg=$(this).css('background',caja1bg);
-                });
-                */
-                    /*
-                    $('#caja1').on('mouseover',function() {
-                      caja1bg=$(this).css('background')
-                      $(this).css('background','red'); 
-                    });
-                    
-                    $('#caja1').on('mouseout',function(){
-                        caja1bg=$(this).css('background',caja1bg);
-                    });
-                    */
-                    // .one hace el evento una vez .one('mouseover')
-                    
-                    var f1= function(){console.log('pasaste el cursor')};
-                    var f2= function(){
-                        v++;
-                        caja1bg=$(this).css('background')
-                         $(this).css('background','red'); 
-                    };
-                    
-                    $('#caja1').on
-                    ({// a partir de la 1.7 de la jquery
-                        
-                        mouseover:f2,
-                        
-                        mouseout:function()
+                    $("#Input").on('cambio',function(){
+                       if(this.checked)
+                           {
+                               $("#Input").removeAttr('checked');
+                               $('.cambiar').text('Encender');
+                           }
+                        else
                         {
-                        caja1bg=$(this).css('background',caja1bg);
-                        if(v>=3)
-                            {
-                                $('#caja1').off('mouseover');
-                            }
-                        
+                            $("#Input").attr('checked','checked');
+                            $('.cambiar').text('Apagado');
                         }
-                        
-     
                     });
-                    $('#caja1').on('mouseover',f1);
                     
+                    $('.cambiar').on('click',function(){
+                       $("#Input").trigger('cambio',[$(this).attr('id')]); 
+                    });
                 });
                 
             </script>
@@ -65,17 +29,9 @@
 
     </head>
 
-    <style>
-        
-    div
-        {
-            height: 300px;
-            width:300px;
-        }
-        
-    </style>
-    
     <body>
-        <div id="caja1"></div>
+        <input type="checkbox" id="Input" checked="ckecked">
+        <button class="cambiar" id="btnUno">Apagar</button>
+        <button class="cambiar" id="btnDos">Apagar</button>
     </body>
 </html>

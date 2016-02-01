@@ -3,34 +3,59 @@
             <script src="jquery-2.20.min.js"></script>
             
             <script type="text/javascript">
-                
-                var caja1bg,v=0;
-                
+                             
                 $(document).on('ready',function()
                 {
-                    $.fx.speeds.lentoo=3000;
-                    $('#boton').on('click',function(){
-                       $('#ejemplo').fadeOut('lentoo'); 
-                    });
+                        $("#caja1").animate({
+                            marginBottom:0,
+                            
+                        },5000,function(){//tiempo
+                            
+                            
+                            $("#caja1").animate({
+                                marginTop:-100,
+                                opacity:-0.5
+                            })
+                        });
                 });
                 
             </script>
 
             <style>             
-            #ejemplo
+            
+                body,html
                 {
-                    height: 200px;
-                    width:400px;
-                    background-color: rgb(250,100,100);
-                }   
+                    padding: 100px;
+                }
+                
+                div
+                {
+                    display: block;
+                    height: 80px;
+                    width: 400px;
+                    margin: 0 auto;
+
+                }
+                
+                #caja1
+                {
+                    background: rgba(56,56,56,0.8);
+                    margin-bottom: 100px;
+                }
+                
+                #caja2
+                {
+                    background: rgba(89,69,36,0.8);
+                }
+                
             </style>
         
 
     </head>
 
     <body>
-        <div id="ejemplo"></div>
-        <button id="boton">Fade Out</button>
+        <div id="caja1"></div>
+        <div id="caja2"></div>
 
     </body>
 </html>

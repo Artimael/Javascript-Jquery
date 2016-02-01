@@ -6,46 +6,20 @@
                              
                 $(document).on('ready',function()
                 {
-                        $("#caja1").animate({
-                            marginBottom:0,
-                            
-                        },5000,function(){//tiempo
-                            
-                            
-                            $("#caja1").animate({
-                                marginTop:-100,
-                                opacity:-0.5
-                            })
-                        });
+                    $("#boton").on('click',function(){
+                       $("#ejemplo").slideUp('fast','swing'); 
+                    });
                 });
                 
             </script>
 
             <style>             
             
-                body,html
+            #ejemplo
                 {
-                    padding: 100px;
-                }
-                
-                div
-                {
-                    display: block;
-                    height: 80px;
-                    width: 400px;
-                    margin: 0 auto;
-
-                }
-                
-                #caja1
-                {
-                    background: rgba(56,56,56,0.8);
-                    margin-bottom: 100px;
-                }
-                
-                #caja2
-                {
-                    background: rgba(89,69,36,0.8);
+                    height: 200px;
+                    width:400px;
+                    background-color: rgb(250,100,100);
                 }
                 
             </style>
@@ -54,8 +28,8 @@
     </head>
 
     <body>
-        <div id="caja1"></div>
-        <div id="caja2"></div>
+        <div id="ejemplo"></div>
+        <button id="boton">Mover</button>
 
     </body>
 </html>

@@ -7,77 +7,28 @@
              <script type="text/javascript">
                 
 
-              
+                 //XMLHTTPREQUEST- peticiones a servidor y recibir la respuesta
+                 //asincronica obtener datos sin recargar la pagina
+                //pedir datos mientras el codigo se sigue ejecutando
                             
+                 var respuesta
+                 $.get('pagina.php',function(resp),{respuesta=resp});
+                 console.log(respuesta);//marcara idefinido
+                 
                  $(document).on('ready',function()
                  {
                      
-                     var to=setTimeout('pararAnim()',2000);
-                     
-                   $.fx.speeds.lentoo=3000;
-                   $('#boton').on('click',function(){
-                      $('#ejemplo').fadeOut('lentoo'); 
-                   });
-                       $("#caja1").animate({
-                           marginBottom:0,
-                           
-                       },5000,function(){//tiempo
-                           
-                           
-                           $("#caja1").animate({
-                               marginTop:-100,                                
-                               opacity:-0.5                            
-                           })
-                       });
-                       
-                     
-                     $('#caja1').slideUp().delay(2000).slideDown();
+
                  });
                  
-                 function pararAnim()
-                 {
-                     $("#caja1").stop();
-                 }
-                 
+
              </script>
  
-             <style>                
-            
-                body,html
-                 {
-
-                   padding: 100px;
-                 }
-                
-                div
-                {
-                    display: block;
-                    height: 80px;
-                    width: 400px;
-                    margin: 0 auto;
-               }
-                
-                #caja1
-               {
-                    background: rgba(56,56,56,0.8);
-                    margin-bottom: 100px;
-                }
-                
-                #caja2
-                {
-                    background: rgba(89,69,36,0.8);
-                }
-                
-             </style>
          
  
      </head>
  
      <body>
-        <div id="ejemplo"></div>
-        <div id="caja1"></div>
-        <div id="caja2"></div>
-        <button id="boton">Fade Out</button>
- 
+
      </body>
  </html>

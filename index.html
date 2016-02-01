@@ -8,47 +8,29 @@
                 
                 $(document).on('ready',function()
                 {
-                     var elem=$('#caja1');
-                     $("#btn1").click(function(){
-                       //Mostrar elemento  
-                        // elem.show();
-                       //  elem.slideDown();
-                         //elem.fadeIn();
-                        elem.fadeIn(600);//ms
-                     }); 
-                    
-                     $("#btn2").click(function(){
-                       //Ocultar elemento 
-                         //elem.hide();
-                       //  elem.slideUp();
-                        // elem.fadeOut();
-                         //elem.slideToggle();
-                         elem.fadeOut('fast');
-                         
-                     }); //
+                    $.fx.speeds.lentoo=3000;
+                    $('#boton').on('click',function(){
+                       $('#ejemplo').fadeOut('lentoo'); 
+                    });
                 });
                 
             </script>
 
-            <style>
-                    
-            #caja1
+            <style>             
+            #ejemplo
                 {
-                    background: rgba(56,56,56,0.8);
-                    display: block;
-                    height: 80px;
-                    margin:5%auto;
-                    width: 400px;
-                }
-                
+                    height: 200px;
+                    width:400px;
+                    background-color: rgb(250,100,100);
+                }   
             </style>
         
 
     </head>
 
     <body>
-        <div id="caja1"></div>
-        <button id="btn1">Mostrar</button>
-        <button id="btn2">Ocultar</button>
+        <div id="ejemplo"></div>
+        <button id="boton">Fade Out</button>
+
     </body>
 </html>
